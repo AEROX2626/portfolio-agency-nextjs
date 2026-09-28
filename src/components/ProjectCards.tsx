@@ -20,7 +20,7 @@ export default function ProjectCards({ onOpenModal, filter }: { onOpenModal: (ca
                             <div className="relative z-10 w-full h-full flex flex-col justify-between bg-black/40">
                                 {/* Fake Header */}
                                 <div className="w-full px-4 py-3 flex justify-between items-center text-white border-b border-white/10">
-                                    <div className="font-serif font-bold text-lg tracking-wide">לומה.</div>
+                                    <div className="font-sans font-bold font-bold text-lg tracking-wide">לומה.</div>
                                     <div className="hidden sm:flex gap-4 text-[9px] font-medium tracking-wide">
                                         <span className="hover:text-gray-300 cursor-pointer">סלון</span>
                                         <span className="hover:text-gray-300 cursor-pointer">חדר שינה</span>
@@ -34,14 +34,14 @@ export default function ProjectCards({ onOpenModal, filter }: { onOpenModal: (ca
                                 {/* Fake Hero Content */}
                                 <div className="px-5 pb-6">
                                     <span className="text-white/80 text-[9px] font-bold tracking-widest uppercase mb-1 block">קולקציית אביב 2024</span>
-                                    <h4 className="text-white text-3xl font-serif mb-2 leading-none">ריהוט שמרגיש<br/>כמו בית.</h4>
+                                    <h4 className="text-white text-3xl font-sans font-bold mb-2 leading-none">ריהוט שמרגיש<br/>כמו בית.</h4>
                                     <button className="bg-white text-black text-[10px] font-bold px-4 py-2 mt-2 hover:bg-gray-100 transition-colors">צפייה בקולקציה</button>
                                 </div>
                             </div>
                         </div>
 
                         {/* Hover Overlay */}
-                        <div className="project-overlay absolute inset-0 bg-premium-900/95 backdrop-blur-sm opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center z-30">
+                        <div className="project-overlay group-hover:opacity-100 absolute inset-0 bg-premium-900/95 backdrop-blur-sm opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center z-30">
                             <span className="text-xs font-medium text-premium-gold mb-3 tracking-widest uppercase">איקומרס / ריהוט הבית</span>
                             <h3 className="text-2xl font-bold text-white mb-3">LUMA - עיצוב חללים</h3>
                             <p className="text-gray-400 text-sm leading-relaxed mb-6">חנות סחר אלקטרוני מתקדמת למותג ריהוט יוקרתי, הכוללת קטלוג חכם, סינון מתקדם וממשק משתמש אלגנטי וחלק.</p>
@@ -71,7 +71,7 @@ export default function ProjectCards({ onOpenModal, filter }: { onOpenModal: (ca
                                 <div className="w-full px-5 py-3 flex justify-between items-center text-white">
                                     <div className="flex flex-col items-center">
                                         <svg className="w-5 h-5 mb-0.5 text-white/90" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
-                                        <span className="font-serif text-[8px] uppercase tracking-widest">ורד המדבר</span>
+                                        <span className="font-sans font-bold text-[8px] uppercase tracking-widest">ורד המדבר</span>
                                     </div>
                                     <div className="flex gap-1">
                                         <div className="w-4 h-[1px] bg-white"></div>
@@ -80,7 +80,7 @@ export default function ProjectCards({ onOpenModal, filter }: { onOpenModal: (ca
                                 </div>
                                 
                                 <div className="text-center px-4 mb-2">
-                                    <h4 className="text-white text-3xl font-serif tracking-wide drop-shadow-md">חופשה במדבר</h4>
+                                    <h4 className="text-white text-3xl font-sans font-bold tracking-wide drop-shadow-md">חופשה במדבר</h4>
                                 </div>
 
                                 {/* Fake Booking Bar */}
@@ -99,7 +99,7 @@ export default function ProjectCards({ onOpenModal, filter }: { onOpenModal: (ca
                         </div>
 
                         {/* Hover Overlay */}
-                        <div className="project-overlay absolute inset-0 bg-premium-900/95 backdrop-blur-sm opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center z-30">
+                        <div className="project-overlay group-hover:opacity-100 absolute inset-0 bg-premium-900/95 backdrop-blur-sm opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center z-30">
                             <span className="text-xs font-medium text-premium-gold mb-3 tracking-widest uppercase">תדמית ו-B2B / תיירות</span>
                             <h3 className="text-2xl font-bold text-white mb-3">Desert Rose Resort</h3>
                             <p className="text-gray-400 text-sm leading-relaxed mb-6">אתר תדמית ומערכת הזמנות מתקדמת למלון בוטיק מדברי. חווית משתמש מרגיעה המשדרת יוקרה ונופש אקסקלוסיבי.</p>
@@ -166,7 +166,7 @@ export default function ProjectCards({ onOpenModal, filter }: { onOpenModal: (ca
                         </div>
 
                         {/* Hover Overlay */}
-                        <div className="project-overlay absolute inset-0 bg-premium-900/95 backdrop-blur-sm opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center z-30">
+                        <div className="project-overlay group-hover:opacity-100 absolute inset-0 bg-premium-900/95 backdrop-blur-sm opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center z-30">
                             <span className="text-xs font-medium text-premium-gold mb-3 tracking-widest uppercase">אפליקציות ומערכות / SaaS</span>
                             <h3 className="text-2xl font-bold text-white mb-3">NexaData Platform</h3>
                             <p className="text-gray-400 text-sm leading-relaxed mb-6">עיצוב ממשק משתמש (UI/UX) מורכב למערכת ניהול נתונים בענן עבור חברת סטארט-אפ בצמיחה, כולל דשבורדים דינמיים.</p>
@@ -194,7 +194,7 @@ export default function ProjectCards({ onOpenModal, filter }: { onOpenModal: (ca
                             <div className="relative z-10 w-full h-full flex bg-black/60">
                                 {/* Side Nav */}
                                 <div className="w-12 h-full border-l border-white/20 flex flex-col items-center py-4 justify-between bg-black/40 backdrop-blur-sm">
-                                    <div className="text-white font-serif font-bold text-sm">O<br/>A<br/>K</div>
+                                    <div className="text-white font-sans font-bold font-bold text-sm">O<br/>A<br/>K</div>
                                     <div className="flex flex-col gap-4 text-white/50">
                                         <svg className="w-4 h-4 cursor-pointer hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                                     </div>
@@ -202,8 +202,8 @@ export default function ProjectCards({ onOpenModal, filter }: { onOpenModal: (ca
                                 </div>
                                 {/* Content */}
                                 <div className="flex-1 flex flex-col justify-center px-8">
-                                    <span className="text-premium-gold font-serif text-[10px] italic mb-2 tracking-widest">מסעדת שף בתל אביב</span>
-                                    <h4 className="text-white text-3xl font-serif leading-tight mb-4">חוויה קולינרית<br/>בלתי נשכחת.</h4>
+                                    <span className="text-premium-gold font-sans font-bold text-[10px] italic mb-2 tracking-widest">מסעדת שף בתל אביב</span>
+                                    <h4 className="text-white text-3xl font-sans font-bold leading-tight mb-4">חוויה קולינרית<br/>בלתי נשכחת.</h4>
                                     <div className="flex gap-3">
                                         <button className="border border-premium-gold text-premium-gold text-[10px] px-4 py-2 hover:bg-premium-gold hover:text-black transition-colors">הזמנת שולחן</button>
                                         <button className="text-white text-[10px] px-4 py-2 hover:text-premium-gold transition-colors underline underline-offset-4">לתפריט</button>
@@ -213,7 +213,7 @@ export default function ProjectCards({ onOpenModal, filter }: { onOpenModal: (ca
                         </div>
 
                         {/* Hover Overlay */}
-                        <div className="project-overlay absolute inset-0 bg-premium-900/95 backdrop-blur-sm opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center z-30">
+                        <div className="project-overlay group-hover:opacity-100 absolute inset-0 bg-premium-900/95 backdrop-blur-sm opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center z-30">
                             <span className="text-xs font-medium text-premium-gold mb-3 tracking-widest uppercase">תדמית ו-B2B / קולינריה</span>
                             <h3 className="text-2xl font-bold text-white mb-3">OAK מסעדת שף</h3>
                             <p className="text-gray-400 text-sm leading-relaxed mb-6">אתר תדמית מינימליסטי המעביר את החוויה הקולינרית אל המסך, עם ארכיטקטורת תוכן חכמה וחיבור למערכת הזמנת מקומות.</p>
@@ -258,7 +258,7 @@ export default function ProjectCards({ onOpenModal, filter }: { onOpenModal: (ca
                         </div>
 
                         {/* Hover Overlay */}
-                        <div className="project-overlay absolute inset-0 bg-premium-900/95 backdrop-blur-sm opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center z-30">
+                        <div className="project-overlay group-hover:opacity-100 absolute inset-0 bg-premium-900/95 backdrop-blur-sm opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center z-30">
                             <span className="text-xs font-medium text-premium-gold mb-3 tracking-widest uppercase">איקומרס / אופנה</span>
                             <h3 className="text-2xl font-bold text-white mb-3">NOIR - אופנת עילית</h3>
                             <p className="text-gray-400 text-sm leading-relaxed mb-6">חנות וירטואלית רספונסיבית במיוחד למותג אופנה, מתמקדת בביצועים מהירים, הגדלת המרות ובחוויית קנייה חלקה במובייל.</p>
@@ -323,7 +323,7 @@ export default function ProjectCards({ onOpenModal, filter }: { onOpenModal: (ca
                         </div>
 
                         {/* Hover Overlay */}
-                        <div className="project-overlay absolute inset-0 bg-premium-900/95 backdrop-blur-sm opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center z-30">
+                        <div className="project-overlay group-hover:opacity-100 absolute inset-0 bg-premium-900/95 backdrop-blur-sm opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center z-30">
                             <span className="text-xs font-medium text-premium-gold mb-3 tracking-widest uppercase">אפליקציות ומערכות / שירותים</span>
                             <h3 className="text-2xl font-bold text-white mb-3">ZEN - מערכת סטודיו</h3>
                             <p className="text-gray-400 text-sm leading-relaxed mb-6">אפליקציית ווב מתקדמת לניהול מערכת שעות והזמנת שיעורים עבור רשת מכוני יוגה ופילאטיס. חוויה מהירה ואינטואיטיבית.</p>
@@ -348,7 +348,7 @@ export default function ProjectCards({ onOpenModal, filter }: { onOpenModal: (ca
                             
                             {/* Header */}
                             <div className="relative z-10 w-full px-5 py-3 flex justify-between items-center text-white bg-gradient-to-b from-black/70 to-transparent">
-                                <div className="font-serif font-bold text-lg tracking-wide">VISTA.</div>
+                                <div className="font-sans font-bold font-bold text-lg tracking-wide">VISTA.</div>
                                 <div className="text-[9px] font-medium tracking-wide bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full cursor-pointer hover:bg-white/30">צור קשר</div>
                             </div>
                             
@@ -366,7 +366,7 @@ export default function ProjectCards({ onOpenModal, filter }: { onOpenModal: (ca
                                 </div>
                             </div>
                         </div>
-                        <div className="project-overlay absolute inset-0 bg-premium-900/95 backdrop-blur-sm opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center z-30">
+                        <div className="project-overlay group-hover:opacity-100 absolute inset-0 bg-premium-900/95 backdrop-blur-sm opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center z-30">
                             <span className="text-xs font-medium text-premium-gold mb-3 tracking-widest uppercase">תדמית ו-B2B / נדל"ן יוקרה</span>
                             <h3 className="text-2xl font-bold text-white mb-3">VISTA - שיווק נדל"ן</h3>
                             <p className="text-gray-400 text-sm leading-relaxed mb-6">אתר קטלוגי המציג פרויקטים של נדל"ן יוקרה בישראל, מבוסס על ויזואליה חזקה ומערכת סינון נכסים מותאמת אישית.</p>
@@ -410,7 +410,7 @@ export default function ProjectCards({ onOpenModal, filter }: { onOpenModal: (ca
                                 </div>
                             </div>
                         </div>
-                        <div className="project-overlay absolute inset-0 bg-premium-900/95 backdrop-blur-sm opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center z-30">
+                        <div className="project-overlay group-hover:opacity-100 absolute inset-0 bg-premium-900/95 backdrop-blur-sm opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center z-30">
                             <span className="text-xs font-medium text-premium-gold mb-3 tracking-widest uppercase">איקומרס / סאונד וטכנולוגיה</span>
                             <h3 className="text-2xl font-bold text-white mb-3">AURA Audio</h3>
                             <p className="text-gray-400 text-sm leading-relaxed mb-6">חנות אונליין לאוזניות פרימיום ציוד שמע. בנינו ממשק 3D אינטראקטיבי המאפשר לסובב ולבחון את המוצר מכל זווית לפני הרכישה.</p>
@@ -473,7 +473,7 @@ export default function ProjectCards({ onOpenModal, filter }: { onOpenModal: (ca
                                 </div>
                             </div>
                         </div>
-                        <div className="project-overlay absolute inset-0 bg-premium-900/95 backdrop-blur-sm opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center z-30">
+                        <div className="project-overlay group-hover:opacity-100 absolute inset-0 bg-premium-900/95 backdrop-blur-sm opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center z-30">
                             <span className="text-xs font-medium text-premium-gold mb-3 tracking-widest uppercase">אפליקציות ומערכות / פינטק</span>
                             <h3 className="text-2xl font-bold text-white mb-3">PayFlow - ארנק דיגיטלי</h3>
                             <p className="text-gray-400 text-sm leading-relaxed mb-6">עיצוב ופיתוח אפליקציית ווב פיננסית להעברת כספים בינלאומית, עם דגש על אבטחת מידע קפדנית וממשק ידידותי למשתמש.</p>
@@ -499,9 +499,9 @@ export default function ProjectCards({ onOpenModal, filter }: { onOpenModal: (ca
                             <div className="relative z-10 w-full bg-[#1a2332]/90 backdrop-blur text-white flex justify-between items-center px-4 py-3 border-b border-white/10">
                                 <div className="flex items-center gap-2">
                                     <div className="w-5 h-5 border border-white/40 flex items-center justify-center">
-                                        <span className="font-serif text-[10px]">S</span>
+                                        <span className="font-sans font-bold text-[10px]">S</span>
                                     </div>
-                                    <span className="font-serif text-[11px] font-bold tracking-wide">סטרלינג ושות'</span>
+                                    <span className="font-sans font-bold text-[11px] font-bold tracking-wide">סטרלינג ושות'</span>
                                 </div>
                                 <div className="flex gap-3 text-[8px] text-gray-300 uppercase tracking-widest hidden sm:flex">
                                     <span className="hover:text-white cursor-pointer">הצוות</span>
@@ -511,11 +511,11 @@ export default function ProjectCards({ onOpenModal, filter }: { onOpenModal: (ca
                             </div>
                             <div className="relative z-10 flex-1 flex flex-col items-center justify-center text-center px-6 bg-black/40">
                                 <span className="text-gray-300 text-[8px] uppercase tracking-[0.2em] mb-2 border-b border-gray-400 pb-1">מצוינות משפטית מ-1998</span>
-                                <h4 className="text-white text-3xl font-serif leading-snug mb-4">מובילים בייצוג מסחרי<br/>וליטיגציה מורכבת.</h4>
+                                <h4 className="text-white text-3xl font-sans font-bold leading-snug mb-4">מובילים בייצוג מסחרי<br/>וליטיגציה מורכבת.</h4>
                                 <button className="bg-[#c2a170] text-white text-[9px] font-bold px-5 py-2 hover:bg-[#a6885b] transition-colors">קבע פגישת ייעוץ</button>
                             </div>
                         </div>
-                        <div className="project-overlay absolute inset-0 bg-premium-900/95 backdrop-blur-sm opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center z-30">
+                        <div className="project-overlay group-hover:opacity-100 absolute inset-0 bg-premium-900/95 backdrop-blur-sm opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center z-30">
                             <span className="text-xs font-medium text-premium-gold mb-3 tracking-widest uppercase">תדמית ו-B2B / עריכת דין</span>
                             <h3 className="text-2xl font-bold text-white mb-3">Sterling & Co</h3>
                             <p className="text-gray-400 text-sm leading-relaxed mb-6">אתר תדמית סמכותי ומרשים למשרד עורכי דין בינלאומי. ארכיטקטורת האתר מדגישה את מומחיות המשרד ואת הצוות המשפטי.</p>
@@ -540,13 +540,13 @@ export default function ProjectCards({ onOpenModal, filter }: { onOpenModal: (ca
                             
                             <div className="relative z-10 w-full flex justify-between items-center px-5 py-4 text-gray-800">
                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                                <div className="font-serif text-xl font-bold tracking-tight">GLOW.</div>
+                                <div className="font-sans font-bold text-xl font-bold tracking-tight">GLOW.</div>
                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
                             </div>
                             <div className="relative z-10 flex-1 flex flex-col justify-end p-5">
                                 <div className="bg-white/80 backdrop-blur p-4 rounded-xl shadow-sm inline-block self-start max-w-[160px]">
                                     <span className="bg-green-100 text-green-800 text-[7px] font-bold px-1.5 py-0.5 rounded uppercase tracking-wider mb-1 inline-block">100% טבעי</span>
-                                    <h4 className="text-gray-900 text-sm font-serif font-bold mb-1">סרום ויטמין C</h4>
+                                    <h4 className="text-gray-900 text-sm font-sans font-bold font-bold mb-1">סרום ויטמין C</h4>
                                     <p className="text-gray-500 text-[8px] mb-2 leading-tight">מעניק לחות עמוקה וזוהר טבעי לעור הפנים.</p>
                                     <div className="flex justify-between items-center">
                                         <span className="text-gray-900 font-bold text-[10px]">₪149</span>
@@ -555,7 +555,7 @@ export default function ProjectCards({ onOpenModal, filter }: { onOpenModal: (ca
                                 </div>
                             </div>
                         </div>
-                        <div className="project-overlay absolute inset-0 bg-premium-900/95 backdrop-blur-sm opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center z-30">
+                        <div className="project-overlay group-hover:opacity-100 absolute inset-0 bg-premium-900/95 backdrop-blur-sm opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center z-30">
                             <span className="text-xs font-medium text-premium-gold mb-3 tracking-widest uppercase">איקומרס / ביוטי וקוסמטיקה</span>
                             <h3 className="text-2xl font-bold text-white mb-3">Glow Botanicals</h3>
                             <p className="text-gray-400 text-sm leading-relaxed mb-6">אתר איקומרס למותג קוסמטיקה טבעית. עיצוב נקי ורך המעביר את ערכי המותג, עם תהליך צ'קאאוט פשוט וממיר במיוחד.</p>
@@ -602,7 +602,7 @@ export default function ProjectCards({ onOpenModal, filter }: { onOpenModal: (ca
                                 </div>
                             </div>
                         </div>
-                        <div className="project-overlay absolute inset-0 bg-premium-900/95 backdrop-blur-sm opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center z-30">
+                        <div className="project-overlay group-hover:opacity-100 absolute inset-0 bg-premium-900/95 backdrop-blur-sm opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center z-30">
                             <span className="text-xs font-medium text-premium-gold mb-3 tracking-widest uppercase">אפליקציות ומערכות / כושר ואורח חיים</span>
                             <h3 className="text-2xl font-bold text-white mb-3">PULSE - מעקב אימונים</h3>
                             <p className="text-gray-400 text-sm leading-relaxed mb-6">מערכת SaaS למאמני כושר לניהול מתאמנים, תוכניות אימון ומעקב התקדמות בזמן אמת. ממשק אנרגטי ומניע לפעולה.</p>
@@ -643,7 +643,7 @@ export default function ProjectCards({ onOpenModal, filter }: { onOpenModal: (ca
                                 </div>
                             </div>
                         </div>
-                        <div className="project-overlay absolute inset-0 bg-premium-900/95 backdrop-blur-sm opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center z-30">
+                        <div className="project-overlay group-hover:opacity-100 absolute inset-0 bg-premium-900/95 backdrop-blur-sm opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center z-30">
                             <span className="text-xs font-medium text-premium-gold mb-3 tracking-widest uppercase">תדמית ו-B2B / אדריכלות</span>
                             <h3 className="text-2xl font-bold text-white mb-3">Studio K</h3>
                             <p className="text-gray-400 text-sm leading-relaxed mb-6">תיק עבודות דיגיטלי למשרד אדריכלים בינלאומי. עיצוב מינימליסטי השם את התמונות במרכז באמצעות תצוגת מסך מלא.</p>
@@ -668,15 +668,15 @@ export default function ProjectCards({ onOpenModal, filter }: { onOpenModal: (ca
                             
                             <div className="relative z-10 w-full px-5 py-4 border-b border-[#d4af37]/20 flex justify-between items-center bg-black/30 backdrop-blur-sm">
                                 <span className="text-[#d4af37] text-[8px] uppercase tracking-widest cursor-pointer">חיפוש</span>
-                                <h4 className="text-[#d4af37] text-lg font-serif tracking-widest">LUMIÈRE</h4>
+                                <h4 className="text-[#d4af37] text-lg font-sans font-bold tracking-widest">LUMIÈRE</h4>
                                 <span className="text-[#d4af37] text-[8px] uppercase tracking-widest cursor-pointer">סל (0)</span>
                             </div>
                             <div className="relative z-10 flex-1 flex flex-col justify-center items-center text-center px-4">
-                                <h4 className="text-white text-2xl font-serif font-light tracking-wide mb-4">קולקציית אבן ספיר</h4>
+                                <h4 className="text-white text-2xl font-sans font-bold font-light tracking-wide mb-4">קולקציית אבן ספיר</h4>
                                 <div className="px-6 py-2 border border-[#d4af37] text-[#d4af37] text-[9px] uppercase tracking-widest hover:bg-[#d4af37] hover:text-black transition-colors cursor-pointer">למדידה ב-AR</div>
                             </div>
                         </div>
-                        <div className="project-overlay absolute inset-0 bg-premium-900/95 backdrop-blur-sm opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center z-30">
+                        <div className="project-overlay group-hover:opacity-100 absolute inset-0 bg-premium-900/95 backdrop-blur-sm opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center z-30">
                             <span className="text-xs font-medium text-premium-gold mb-3 tracking-widest uppercase">איקומרס / תכשיטי יוקרה</span>
                             <h3 className="text-2xl font-bold text-white mb-3">LUMIÈRE</h3>
                             <p className="text-gray-400 text-sm leading-relaxed mb-6">פלטפורמת מסחר יוקרתית למותג תכשיטים, משלבת חווית גלישה אקסקלוסיבית ופיצ'ר של מדידת תכשיטים במציאות רבודה (AR).</p>
@@ -722,7 +722,7 @@ export default function ProjectCards({ onOpenModal, filter }: { onOpenModal: (ca
                                 <span className="bg-purple-100 text-purple-700 text-[8px] font-bold px-2 py-1 rounded">עיצוב UI/UX (8)</span>
                             </div>
                         </div>
-                        <div className="project-overlay absolute inset-0 bg-premium-900/95 backdrop-blur-sm opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center z-30">
+                        <div className="project-overlay group-hover:opacity-100 absolute inset-0 bg-premium-900/95 backdrop-blur-sm opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center z-30">
                             <span className="text-xs font-medium text-premium-gold mb-3 tracking-widest uppercase">אפליקציות ומערכות / EdTech</span>
                             <h3 className="text-2xl font-bold text-white mb-3">Elevate - פלטפורמת למידה</h3>
                             <p className="text-gray-400 text-sm leading-relaxed mb-6">מערכת ניהול קורסים (LMS) מתקדמת המאפשרת למידה מקוונת חכמה, כולל אזור אישי לתלמיד, צפייה בוידאו אינטראקטיבי וניהול מטלות.</p>
@@ -755,7 +755,7 @@ export default function ProjectCards({ onOpenModal, filter }: { onOpenModal: (ca
                                 <button className="bg-red-600 text-white text-[9px] font-bold px-5 py-2 uppercase tracking-widest hover:bg-red-700 transition-colors">תיאום נסיעת מבחן</button>
                             </div>
                         </div>
-                        <div className="project-overlay absolute inset-0 bg-premium-900/95 backdrop-blur-sm opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center z-30">
+                        <div className="project-overlay group-hover:opacity-100 absolute inset-0 bg-premium-900/95 backdrop-blur-sm opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-8 text-center z-30">
                             <span className="text-xs font-medium text-premium-gold mb-3 tracking-widest uppercase">תדמית ו-B2B / רכבי יוקרה</span>
                             <h3 className="text-2xl font-bold text-white mb-3">Apex Motors</h3>
                             <p className="text-gray-400 text-sm leading-relaxed mb-6">אתר תדמית ולידים מרהיב לסוכנות יבוא רכבי יוקרה. חווית גלישה המשדרת עוצמה ומהירות, עם קונפיגורטור לבניית הרכב המושלם.</p>
