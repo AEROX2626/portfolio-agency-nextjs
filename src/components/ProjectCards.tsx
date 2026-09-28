@@ -45,7 +45,7 @@ export default function ProjectCards({ onOpenModal, filter }: { onOpenModal: (ca
                             <span className="text-xs font-medium text-premium-gold mb-3 tracking-widest uppercase">איקומרס / ריהוט הבית</span>
                             <h3 className="text-2xl font-bold text-white mb-3">LUMA - עיצוב חללים</h3>
                             <p className="text-gray-400 text-sm leading-relaxed mb-6">חנות סחר אלקטרוני מתקדמת למותג ריהוט יוקרתי, הכוללת קטלוג חכם, סינון מתקדם וממשק משתמש אלגנטי וחלק.</p>
-                            <button onClick={(e) => { e.stopPropagation(); const card = e.currentTarget.closest(".project-card"); if(card) { onOpenModal({ category: card.getAttribute("data-category"), imgSrc: card.querySelector("img")?.src, title: card.querySelector("h3")?.innerText, subCategory: card.querySelector(".project-overlay span")?.innerText }); } }} className="inline-flex items-center gap-2 text-white text-sm font-medium border-b border-transparent hover:border-premium-gold transition-colors pb-1">
+                            <button onClick={(e) => { e.stopPropagation(); const card = e.currentTarget.closest(".project-card"); if(card) { onOpenModal({ category: card.getAttribute("data-category"), imgSrc: card.querySelector("img")?.src, title: card.querySelector("h3")?.textContent, subCategory: card.querySelector(".project-overlay span")?.textContent }); } }} className="inline-flex items-center gap-2 text-white text-sm font-medium border-b border-transparent hover:border-premium-gold transition-colors pb-1">
                                 צפה בתהליך הפיתוח
                             </button>
                         </div>
@@ -103,7 +103,7 @@ export default function ProjectCards({ onOpenModal, filter }: { onOpenModal: (ca
                             <span className="text-xs font-medium text-premium-gold mb-3 tracking-widest uppercase">תדמית ו-B2B / תיירות</span>
                             <h3 className="text-2xl font-bold text-white mb-3">Desert Rose Resort</h3>
                             <p className="text-gray-400 text-sm leading-relaxed mb-6">אתר תדמית ומערכת הזמנות מתקדמת למלון בוטיק מדברי. חווית משתמש מרגיעה המשדרת יוקרה ונופש אקסקלוסיבי.</p>
-                            <button onClick={(e) => { e.stopPropagation(); const card = e.currentTarget.closest(".project-card"); if(card) { onOpenModal({ category: card.getAttribute("data-category"), imgSrc: card.querySelector("img")?.src, title: card.querySelector("h3")?.innerText, subCategory: card.querySelector(".project-overlay span")?.innerText }); } }} className="inline-flex items-center gap-2 text-white text-sm font-medium border-b border-transparent hover:border-premium-gold transition-colors pb-1">
+                            <button onClick={(e) => { e.stopPropagation(); const card = e.currentTarget.closest(".project-card"); if(card) { onOpenModal({ category: card.getAttribute("data-category"), imgSrc: card.querySelector("img")?.src, title: card.querySelector("h3")?.textContent, subCategory: card.querySelector(".project-overlay span")?.textContent }); } }} className="inline-flex items-center gap-2 text-white text-sm font-medium border-b border-transparent hover:border-premium-gold transition-colors pb-1">
                                 צפה בתהליך הפיתוח
                             </button>
                         </div>
@@ -170,7 +170,7 @@ export default function ProjectCards({ onOpenModal, filter }: { onOpenModal: (ca
                             <span className="text-xs font-medium text-premium-gold mb-3 tracking-widest uppercase">אפליקציות ומערכות / SaaS</span>
                             <h3 className="text-2xl font-bold text-white mb-3">NexaData Platform</h3>
                             <p className="text-gray-400 text-sm leading-relaxed mb-6">עיצוב ממשק משתמש (UI/UX) מורכב למערכת ניהול נתונים בענן עבור חברת סטארט-אפ בצמיחה, כולל דשבורדים דינמיים.</p>
-                            <button onClick={(e) => { e.stopPropagation(); const card = e.currentTarget.closest(".project-card"); if(card) { onOpenModal({ category: card.getAttribute("data-category"), imgSrc: card.querySelector("img")?.src, title: card.querySelector("h3")?.innerText, subCategory: card.querySelector(".project-overlay span")?.innerText }); } }} className="inline-flex items-center gap-2 text-white text-sm font-medium border-b border-transparent hover:border-premium-gold transition-colors pb-1">
+                            <button onClick={(e) => { e.stopPropagation(); const card = e.currentTarget.closest(".project-card"); if(card) { onOpenModal({ category: card.getAttribute("data-category"), imgSrc: card.querySelector("img")?.src, title: card.querySelector("h3")?.textContent, subCategory: card.querySelector(".project-overlay span")?.textContent }); } }} className="inline-flex items-center gap-2 text-white text-sm font-medium border-b border-transparent hover:border-premium-gold transition-colors pb-1">
                                 צפה בתהליך הפיתוח
                             </button>
                         </div>
@@ -217,7 +217,7 @@ export default function ProjectCards({ onOpenModal, filter }: { onOpenModal: (ca
                             <span className="text-xs font-medium text-premium-gold mb-3 tracking-widest uppercase">תדמית ו-B2B / קולינריה</span>
                             <h3 className="text-2xl font-bold text-white mb-3">OAK מסעדת שף</h3>
                             <p className="text-gray-400 text-sm leading-relaxed mb-6">אתר תדמית מינימליסטי המעביר את החוויה הקולינרית אל המסך, עם ארכיטקטורת תוכן חכמה וחיבור למערכת הזמנת מקומות.</p>
-                            <button onClick={(e) => { e.stopPropagation(); const card = e.currentTarget.closest(".project-card"); if(card) { onOpenModal({ category: card.getAttribute("data-category"), imgSrc: card.querySelector("img")?.src, title: card.querySelector("h3")?.innerText, subCategory: card.querySelector(".project-overlay span")?.innerText }); } }} className="inline-flex items-center gap-2 text-white text-sm font-medium border-b border-transparent hover:border-premium-gold transition-colors pb-1">
+                            <button onClick={(e) => { e.stopPropagation(); const card = e.currentTarget.closest(".project-card"); if(card) { onOpenModal({ category: card.getAttribute("data-category"), imgSrc: card.querySelector("img")?.src, title: card.querySelector("h3")?.textContent, subCategory: card.querySelector(".project-overlay span")?.textContent }); } }} className="inline-flex items-center gap-2 text-white text-sm font-medium border-b border-transparent hover:border-premium-gold transition-colors pb-1">
                                 צפה בתהליך הפיתוח
                             </button>
                         </div>
@@ -262,7 +262,7 @@ export default function ProjectCards({ onOpenModal, filter }: { onOpenModal: (ca
                             <span className="text-xs font-medium text-premium-gold mb-3 tracking-widest uppercase">איקומרס / אופנה</span>
                             <h3 className="text-2xl font-bold text-white mb-3">NOIR - אופנת עילית</h3>
                             <p className="text-gray-400 text-sm leading-relaxed mb-6">חנות וירטואלית רספונסיבית במיוחד למותג אופנה, מתמקדת בביצועים מהירים, הגדלת המרות ובחוויית קנייה חלקה במובייל.</p>
-                            <button onClick={(e) => { e.stopPropagation(); const card = e.currentTarget.closest(".project-card"); if(card) { onOpenModal({ category: card.getAttribute("data-category"), imgSrc: card.querySelector("img")?.src, title: card.querySelector("h3")?.innerText, subCategory: card.querySelector(".project-overlay span")?.innerText }); } }} className="inline-flex items-center gap-2 text-white text-sm font-medium border-b border-transparent hover:border-premium-gold transition-colors pb-1">
+                            <button onClick={(e) => { e.stopPropagation(); const card = e.currentTarget.closest(".project-card"); if(card) { onOpenModal({ category: card.getAttribute("data-category"), imgSrc: card.querySelector("img")?.src, title: card.querySelector("h3")?.textContent, subCategory: card.querySelector(".project-overlay span")?.textContent }); } }} className="inline-flex items-center gap-2 text-white text-sm font-medium border-b border-transparent hover:border-premium-gold transition-colors pb-1">
                                 צפה בתהליך הפיתוח
                             </button>
                         </div>
@@ -327,7 +327,7 @@ export default function ProjectCards({ onOpenModal, filter }: { onOpenModal: (ca
                             <span className="text-xs font-medium text-premium-gold mb-3 tracking-widest uppercase">אפליקציות ומערכות / שירותים</span>
                             <h3 className="text-2xl font-bold text-white mb-3">ZEN - מערכת סטודיו</h3>
                             <p className="text-gray-400 text-sm leading-relaxed mb-6">אפליקציית ווב מתקדמת לניהול מערכת שעות והזמנת שיעורים עבור רשת מכוני יוגה ופילאטיס. חוויה מהירה ואינטואיטיבית.</p>
-                            <button onClick={(e) => { e.stopPropagation(); const card = e.currentTarget.closest(".project-card"); if(card) { onOpenModal({ category: card.getAttribute("data-category"), imgSrc: card.querySelector("img")?.src, title: card.querySelector("h3")?.innerText, subCategory: card.querySelector(".project-overlay span")?.innerText }); } }} className="inline-flex items-center gap-2 text-white text-sm font-medium border-b border-transparent hover:border-premium-gold transition-colors pb-1">
+                            <button onClick={(e) => { e.stopPropagation(); const card = e.currentTarget.closest(".project-card"); if(card) { onOpenModal({ category: card.getAttribute("data-category"), imgSrc: card.querySelector("img")?.src, title: card.querySelector("h3")?.textContent, subCategory: card.querySelector(".project-overlay span")?.textContent }); } }} className="inline-flex items-center gap-2 text-white text-sm font-medium border-b border-transparent hover:border-premium-gold transition-colors pb-1">
                                 צפה בתהליך הפיתוח
                             </button>
                         </div>
@@ -370,7 +370,7 @@ export default function ProjectCards({ onOpenModal, filter }: { onOpenModal: (ca
                             <span className="text-xs font-medium text-premium-gold mb-3 tracking-widest uppercase">תדמית ו-B2B / נדל"ן יוקרה</span>
                             <h3 className="text-2xl font-bold text-white mb-3">VISTA - שיווק נדל"ן</h3>
                             <p className="text-gray-400 text-sm leading-relaxed mb-6">אתר קטלוגי המציג פרויקטים של נדל"ן יוקרה בישראל, מבוסס על ויזואליה חזקה ומערכת סינון נכסים מותאמת אישית.</p>
-                            <button onClick={(e) => { e.stopPropagation(); const card = e.currentTarget.closest(".project-card"); if(card) { onOpenModal({ category: card.getAttribute("data-category"), imgSrc: card.querySelector("img")?.src, title: card.querySelector("h3")?.innerText, subCategory: card.querySelector(".project-overlay span")?.innerText }); } }} className="inline-flex items-center gap-2 text-white text-sm font-medium border-b border-transparent hover:border-premium-gold transition-colors pb-1">
+                            <button onClick={(e) => { e.stopPropagation(); const card = e.currentTarget.closest(".project-card"); if(card) { onOpenModal({ category: card.getAttribute("data-category"), imgSrc: card.querySelector("img")?.src, title: card.querySelector("h3")?.textContent, subCategory: card.querySelector(".project-overlay span")?.textContent }); } }} className="inline-flex items-center gap-2 text-white text-sm font-medium border-b border-transparent hover:border-premium-gold transition-colors pb-1">
                                 צפה בתהליך הפיתוח
                             </button>
                         </div>
@@ -414,7 +414,7 @@ export default function ProjectCards({ onOpenModal, filter }: { onOpenModal: (ca
                             <span className="text-xs font-medium text-premium-gold mb-3 tracking-widest uppercase">איקומרס / סאונד וטכנולוגיה</span>
                             <h3 className="text-2xl font-bold text-white mb-3">AURA Audio</h3>
                             <p className="text-gray-400 text-sm leading-relaxed mb-6">חנות אונליין לאוזניות פרימיום ציוד שמע. בנינו ממשק 3D אינטראקטיבי המאפשר לסובב ולבחון את המוצר מכל זווית לפני הרכישה.</p>
-                            <button onClick={(e) => { e.stopPropagation(); const card = e.currentTarget.closest(".project-card"); if(card) { onOpenModal({ category: card.getAttribute("data-category"), imgSrc: card.querySelector("img")?.src, title: card.querySelector("h3")?.innerText, subCategory: card.querySelector(".project-overlay span")?.innerText }); } }} className="inline-flex items-center gap-2 text-white text-sm font-medium border-b border-transparent hover:border-premium-gold transition-colors pb-1">
+                            <button onClick={(e) => { e.stopPropagation(); const card = e.currentTarget.closest(".project-card"); if(card) { onOpenModal({ category: card.getAttribute("data-category"), imgSrc: card.querySelector("img")?.src, title: card.querySelector("h3")?.textContent, subCategory: card.querySelector(".project-overlay span")?.textContent }); } }} className="inline-flex items-center gap-2 text-white text-sm font-medium border-b border-transparent hover:border-premium-gold transition-colors pb-1">
                                 צפה בתהליך הפיתוח
                             </button>
                         </div>
@@ -477,7 +477,7 @@ export default function ProjectCards({ onOpenModal, filter }: { onOpenModal: (ca
                             <span className="text-xs font-medium text-premium-gold mb-3 tracking-widest uppercase">אפליקציות ומערכות / פינטק</span>
                             <h3 className="text-2xl font-bold text-white mb-3">PayFlow - ארנק דיגיטלי</h3>
                             <p className="text-gray-400 text-sm leading-relaxed mb-6">עיצוב ופיתוח אפליקציית ווב פיננסית להעברת כספים בינלאומית, עם דגש על אבטחת מידע קפדנית וממשק ידידותי למשתמש.</p>
-                            <button onClick={(e) => { e.stopPropagation(); const card = e.currentTarget.closest(".project-card"); if(card) { onOpenModal({ category: card.getAttribute("data-category"), imgSrc: card.querySelector("img")?.src, title: card.querySelector("h3")?.innerText, subCategory: card.querySelector(".project-overlay span")?.innerText }); } }} className="inline-flex items-center gap-2 text-white text-sm font-medium border-b border-transparent hover:border-premium-gold transition-colors pb-1">
+                            <button onClick={(e) => { e.stopPropagation(); const card = e.currentTarget.closest(".project-card"); if(card) { onOpenModal({ category: card.getAttribute("data-category"), imgSrc: card.querySelector("img")?.src, title: card.querySelector("h3")?.textContent, subCategory: card.querySelector(".project-overlay span")?.textContent }); } }} className="inline-flex items-center gap-2 text-white text-sm font-medium border-b border-transparent hover:border-premium-gold transition-colors pb-1">
                                 צפה בתהליך הפיתוח
                             </button>
                         </div>
@@ -519,7 +519,7 @@ export default function ProjectCards({ onOpenModal, filter }: { onOpenModal: (ca
                             <span className="text-xs font-medium text-premium-gold mb-3 tracking-widest uppercase">תדמית ו-B2B / עריכת דין</span>
                             <h3 className="text-2xl font-bold text-white mb-3">Sterling & Co</h3>
                             <p className="text-gray-400 text-sm leading-relaxed mb-6">אתר תדמית סמכותי ומרשים למשרד עורכי דין בינלאומי. ארכיטקטורת האתר מדגישה את מומחיות המשרד ואת הצוות המשפטי.</p>
-                            <button onClick={(e) => { e.stopPropagation(); const card = e.currentTarget.closest(".project-card"); if(card) { onOpenModal({ category: card.getAttribute("data-category"), imgSrc: card.querySelector("img")?.src, title: card.querySelector("h3")?.innerText, subCategory: card.querySelector(".project-overlay span")?.innerText }); } }} className="inline-flex items-center gap-2 text-white text-sm font-medium border-b border-transparent hover:border-premium-gold transition-colors pb-1">
+                            <button onClick={(e) => { e.stopPropagation(); const card = e.currentTarget.closest(".project-card"); if(card) { onOpenModal({ category: card.getAttribute("data-category"), imgSrc: card.querySelector("img")?.src, title: card.querySelector("h3")?.textContent, subCategory: card.querySelector(".project-overlay span")?.textContent }); } }} className="inline-flex items-center gap-2 text-white text-sm font-medium border-b border-transparent hover:border-premium-gold transition-colors pb-1">
                                 צפה בתהליך הפיתוח
                             </button>
                         </div>
@@ -559,7 +559,7 @@ export default function ProjectCards({ onOpenModal, filter }: { onOpenModal: (ca
                             <span className="text-xs font-medium text-premium-gold mb-3 tracking-widest uppercase">איקומרס / ביוטי וקוסמטיקה</span>
                             <h3 className="text-2xl font-bold text-white mb-3">Glow Botanicals</h3>
                             <p className="text-gray-400 text-sm leading-relaxed mb-6">אתר איקומרס למותג קוסמטיקה טבעית. עיצוב נקי ורך המעביר את ערכי המותג, עם תהליך צ'קאאוט פשוט וממיר במיוחד.</p>
-                            <button onClick={(e) => { e.stopPropagation(); const card = e.currentTarget.closest(".project-card"); if(card) { onOpenModal({ category: card.getAttribute("data-category"), imgSrc: card.querySelector("img")?.src, title: card.querySelector("h3")?.innerText, subCategory: card.querySelector(".project-overlay span")?.innerText }); } }} className="inline-flex items-center gap-2 text-white text-sm font-medium border-b border-transparent hover:border-premium-gold transition-colors pb-1">
+                            <button onClick={(e) => { e.stopPropagation(); const card = e.currentTarget.closest(".project-card"); if(card) { onOpenModal({ category: card.getAttribute("data-category"), imgSrc: card.querySelector("img")?.src, title: card.querySelector("h3")?.textContent, subCategory: card.querySelector(".project-overlay span")?.textContent }); } }} className="inline-flex items-center gap-2 text-white text-sm font-medium border-b border-transparent hover:border-premium-gold transition-colors pb-1">
                                 צפה בתהליך הפיתוח
                             </button>
                         </div>
@@ -606,7 +606,7 @@ export default function ProjectCards({ onOpenModal, filter }: { onOpenModal: (ca
                             <span className="text-xs font-medium text-premium-gold mb-3 tracking-widest uppercase">אפליקציות ומערכות / כושר ואורח חיים</span>
                             <h3 className="text-2xl font-bold text-white mb-3">PULSE - מעקב אימונים</h3>
                             <p className="text-gray-400 text-sm leading-relaxed mb-6">מערכת SaaS למאמני כושר לניהול מתאמנים, תוכניות אימון ומעקב התקדמות בזמן אמת. ממשק אנרגטי ומניע לפעולה.</p>
-                            <button onClick={(e) => { e.stopPropagation(); const card = e.currentTarget.closest(".project-card"); if(card) { onOpenModal({ category: card.getAttribute("data-category"), imgSrc: card.querySelector("img")?.src, title: card.querySelector("h3")?.innerText, subCategory: card.querySelector(".project-overlay span")?.innerText }); } }} className="inline-flex items-center gap-2 text-white text-sm font-medium border-b border-transparent hover:border-premium-gold transition-colors pb-1">
+                            <button onClick={(e) => { e.stopPropagation(); const card = e.currentTarget.closest(".project-card"); if(card) { onOpenModal({ category: card.getAttribute("data-category"), imgSrc: card.querySelector("img")?.src, title: card.querySelector("h3")?.textContent, subCategory: card.querySelector(".project-overlay span")?.textContent }); } }} className="inline-flex items-center gap-2 text-white text-sm font-medium border-b border-transparent hover:border-premium-gold transition-colors pb-1">
                                 צפה בתהליך הפיתוח
                             </button>
                         </div>
@@ -647,7 +647,7 @@ export default function ProjectCards({ onOpenModal, filter }: { onOpenModal: (ca
                             <span className="text-xs font-medium text-premium-gold mb-3 tracking-widest uppercase">תדמית ו-B2B / אדריכלות</span>
                             <h3 className="text-2xl font-bold text-white mb-3">Studio K</h3>
                             <p className="text-gray-400 text-sm leading-relaxed mb-6">תיק עבודות דיגיטלי למשרד אדריכלים בינלאומי. עיצוב מינימליסטי השם את התמונות במרכז באמצעות תצוגת מסך מלא.</p>
-                            <button onClick={(e) => { e.stopPropagation(); const card = e.currentTarget.closest(".project-card"); if(card) { onOpenModal({ category: card.getAttribute("data-category"), imgSrc: card.querySelector("img")?.src, title: card.querySelector("h3")?.innerText, subCategory: card.querySelector(".project-overlay span")?.innerText }); } }} className="inline-flex items-center gap-2 text-white text-sm font-medium border-b border-transparent hover:border-premium-gold transition-colors pb-1">
+                            <button onClick={(e) => { e.stopPropagation(); const card = e.currentTarget.closest(".project-card"); if(card) { onOpenModal({ category: card.getAttribute("data-category"), imgSrc: card.querySelector("img")?.src, title: card.querySelector("h3")?.textContent, subCategory: card.querySelector(".project-overlay span")?.textContent }); } }} className="inline-flex items-center gap-2 text-white text-sm font-medium border-b border-transparent hover:border-premium-gold transition-colors pb-1">
                                 צפה בתהליך הפיתוח
                             </button>
                         </div>
@@ -680,7 +680,7 @@ export default function ProjectCards({ onOpenModal, filter }: { onOpenModal: (ca
                             <span className="text-xs font-medium text-premium-gold mb-3 tracking-widest uppercase">איקומרס / תכשיטי יוקרה</span>
                             <h3 className="text-2xl font-bold text-white mb-3">LUMIÈRE</h3>
                             <p className="text-gray-400 text-sm leading-relaxed mb-6">פלטפורמת מסחר יוקרתית למותג תכשיטים, משלבת חווית גלישה אקסקלוסיבית ופיצ'ר של מדידת תכשיטים במציאות רבודה (AR).</p>
-                            <button onClick={(e) => { e.stopPropagation(); const card = e.currentTarget.closest(".project-card"); if(card) { onOpenModal({ category: card.getAttribute("data-category"), imgSrc: card.querySelector("img")?.src, title: card.querySelector("h3")?.innerText, subCategory: card.querySelector(".project-overlay span")?.innerText }); } }} className="inline-flex items-center gap-2 text-white text-sm font-medium border-b border-transparent hover:border-premium-gold transition-colors pb-1">
+                            <button onClick={(e) => { e.stopPropagation(); const card = e.currentTarget.closest(".project-card"); if(card) { onOpenModal({ category: card.getAttribute("data-category"), imgSrc: card.querySelector("img")?.src, title: card.querySelector("h3")?.textContent, subCategory: card.querySelector(".project-overlay span")?.textContent }); } }} className="inline-flex items-center gap-2 text-white text-sm font-medium border-b border-transparent hover:border-premium-gold transition-colors pb-1">
                                 צפה בתהליך הפיתוח
                             </button>
                         </div>
@@ -726,7 +726,7 @@ export default function ProjectCards({ onOpenModal, filter }: { onOpenModal: (ca
                             <span className="text-xs font-medium text-premium-gold mb-3 tracking-widest uppercase">אפליקציות ומערכות / EdTech</span>
                             <h3 className="text-2xl font-bold text-white mb-3">Elevate - פלטפורמת למידה</h3>
                             <p className="text-gray-400 text-sm leading-relaxed mb-6">מערכת ניהול קורסים (LMS) מתקדמת המאפשרת למידה מקוונת חכמה, כולל אזור אישי לתלמיד, צפייה בוידאו אינטראקטיבי וניהול מטלות.</p>
-                            <button onClick={(e) => { e.stopPropagation(); const card = e.currentTarget.closest(".project-card"); if(card) { onOpenModal({ category: card.getAttribute("data-category"), imgSrc: card.querySelector("img")?.src, title: card.querySelector("h3")?.innerText, subCategory: card.querySelector(".project-overlay span")?.innerText }); } }} className="inline-flex items-center gap-2 text-white text-sm font-medium border-b border-transparent hover:border-premium-gold transition-colors pb-1">
+                            <button onClick={(e) => { e.stopPropagation(); const card = e.currentTarget.closest(".project-card"); if(card) { onOpenModal({ category: card.getAttribute("data-category"), imgSrc: card.querySelector("img")?.src, title: card.querySelector("h3")?.textContent, subCategory: card.querySelector(".project-overlay span")?.textContent }); } }} className="inline-flex items-center gap-2 text-white text-sm font-medium border-b border-transparent hover:border-premium-gold transition-colors pb-1">
                                 צפה בתהליך הפיתוח
                             </button>
                         </div>
@@ -759,7 +759,7 @@ export default function ProjectCards({ onOpenModal, filter }: { onOpenModal: (ca
                             <span className="text-xs font-medium text-premium-gold mb-3 tracking-widest uppercase">תדמית ו-B2B / רכבי יוקרה</span>
                             <h3 className="text-2xl font-bold text-white mb-3">Apex Motors</h3>
                             <p className="text-gray-400 text-sm leading-relaxed mb-6">אתר תדמית ולידים מרהיב לסוכנות יבוא רכבי יוקרה. חווית גלישה המשדרת עוצמה ומהירות, עם קונפיגורטור לבניית הרכב המושלם.</p>
-                            <button onClick={(e) => { e.stopPropagation(); const card = e.currentTarget.closest(".project-card"); if(card) { onOpenModal({ category: card.getAttribute("data-category"), imgSrc: card.querySelector("img")?.src, title: card.querySelector("h3")?.innerText, subCategory: card.querySelector(".project-overlay span")?.innerText }); } }} className="inline-flex items-center gap-2 text-white text-sm font-medium border-b border-transparent hover:border-premium-gold transition-colors pb-1">
+                            <button onClick={(e) => { e.stopPropagation(); const card = e.currentTarget.closest(".project-card"); if(card) { onOpenModal({ category: card.getAttribute("data-category"), imgSrc: card.querySelector("img")?.src, title: card.querySelector("h3")?.textContent, subCategory: card.querySelector(".project-overlay span")?.textContent }); } }} className="inline-flex items-center gap-2 text-white text-sm font-medium border-b border-transparent hover:border-premium-gold transition-colors pb-1">
                                 צפה בתהליך הפיתוח
                             </button>
                         </div>
