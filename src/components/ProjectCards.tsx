@@ -1,4 +1,7 @@
-export default function ProjectCards({ onOpenModal, filter }: { onOpenModal: (cardData: any) => void, filter: string }) {\n  const filterClass = (cat: string) => filter === "all" || filter === cat ? "block opacity-100 scale-100" : "hidden opacity-0 scale-95";\n  return (<>\n
+export default function ProjectCards({ onOpenModal, filter }: { onOpenModal: (cardData: any) => void, filter: string }) {
+  const filterClass = (cat: string) => filter === "all" || filter === cat ? "block opacity-100 scale-100" : "hidden opacity-0 scale-95";
+  return (<>
+
                     {/* Item 1: Furniture Ecommerce (LUMA) */}
                     <div className={`project-card relative rounded-2xl overflow-hidden group portfolio-item reveal bg-gray-900 aspect-[4/3] border border-gray-800 transition-all duration-300 ${filterClass("ecommerce")}`} data-category="ecommerce">
                         <div className="absolute top-0 w-full h-8 bg-gray-800/90 backdrop-blur-md border-b border-gray-700 flex items-center px-4 gap-2 z-20 transition-transform duration-500 group-hover:-translate-y-full">
@@ -761,4 +764,6 @@ export default function ProjectCards({ onOpenModal, filter }: { onOpenModal: (ca
                             </button>
                         </div>
                     </div>
-  </>);\n}\n
+  </>);
+}
+
