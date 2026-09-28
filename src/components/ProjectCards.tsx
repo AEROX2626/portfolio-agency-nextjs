@@ -200,15 +200,15 @@ function RenderUI({ item }: { item: any }) {
 
   if (type === 'dashboard') {
     return (
-      <div className="w-full h-full relative overflow-hidden bg-[#0f172a] pt-8 flex">
-        <div className="w-1/4 h-full bg-[#1e293b] border-l border-gray-800 flex flex-col p-3 z-10">
+      <div className={`w-full h-full relative overflow-hidden ${ui.theme === "emerald" ? "bg-[#18181b]" : "bg-[#0f172a]"} pt-8 flex`}>
+        <div className={`w-1/4 h-full ${ui.theme === "emerald" ? "bg-[#27272a]" : "bg-[#1e293b]"} border-l border-gray-800 flex flex-col p-3 z-10`}>
           <div className="flex items-center gap-1.5 mb-4">
-            <div className="w-4 h-4 bg-blue-500 rounded-md"></div>
+            <div className={`w-4 h-4 ${ui.theme === "emerald" ? "bg-emerald-500" : "bg-blue-500"} rounded-md`}></div>
             <span className="text-white text-[10px] font-bold">{ui.logo}</span>
           </div>
           <div className="space-y-1.5">
             {ui.nav.map((n: string, i: number) => (
-              <div key={i} className={`${i === 0 ? 'bg-blue-500/10 text-blue-400' : 'text-gray-400'} rounded p-1.5 flex items-center gap-2 text-[9px] font-bold`}>{n}</div>
+              <div key={i} className={`${i === 0 ? (ui.theme === "emerald" ? "bg-emerald-500/10 text-emerald-400" : "bg-blue-500/10 text-blue-400") : "text-gray-400"} rounded p-1.5 flex items-center gap-2 text-[9px] font-bold`}>{n}</div>
             ))}
           </div>
         </div>
@@ -217,20 +217,20 @@ function RenderUI({ item }: { item: any }) {
             <span className="text-white font-bold text-xs">{ui.title}</span>
           </div>
           <div className="grid grid-cols-2 gap-2 mb-3">
-            <div className="bg-[#1e293b] p-2 rounded-lg border border-gray-700/50">
+            <div className={`p-2 rounded-lg border border-gray-700/50 ${ui.theme === "emerald" ? "bg-[#27272a]" : "bg-[#1e293b]"}`}>
               <span className="block text-gray-400 text-[8px] font-bold mb-1">{ui.stat1Title}</span>
               <span className="text-white text-sm font-bold">{ui.stat1Value}</span>
             </div>
-            <div className="bg-[#1e293b] p-2 rounded-lg border border-gray-700/50">
+            <div className={`p-2 rounded-lg border border-gray-700/50 ${ui.theme === "emerald" ? "bg-[#27272a]" : "bg-[#1e293b]"}`}>
               <span className="block text-gray-400 text-[8px] font-bold mb-1">{ui.stat2Title}</span>
               <span className="text-white text-sm font-bold">{ui.stat2Value}</span>
             </div>
           </div>
-          <div className="bg-[#1e293b] p-2 rounded-lg border border-gray-700/50 h-[80px] flex items-end gap-1 px-3">
-            <div className="w-full bg-blue-500/20 h-1/3 rounded-t-sm"></div>
-            <div className="w-full bg-blue-500/40 h-2/3 rounded-t-sm"></div>
-            <div className="w-full bg-blue-500/60 h-1/2 rounded-t-sm"></div>
-            <div className="w-full bg-blue-500 h-[90%] rounded-t-sm"></div>
+          <div className={`p-2 rounded-lg border border-gray-700/50 h-[80px] flex items-end gap-1 px-3 ${ui.theme === "emerald" ? "bg-[#27272a]" : "bg-[#1e293b]"}`}>
+            <div className={`w-full h-1/3 rounded-t-sm ${ui.theme === "emerald" ? "bg-emerald-500/20" : "bg-blue-500/20"}`}></div>
+            <div className={`w-full h-2/3 rounded-t-sm ${ui.theme === "emerald" ? "bg-emerald-500/40" : "bg-blue-500/40"}`}></div>
+            <div className={`w-full h-1/2 rounded-t-sm ${ui.theme === "emerald" ? "bg-emerald-500/60" : "bg-blue-500/60"}`}></div>
+            <div className={`w-full h-[90%] rounded-t-sm ${ui.theme === "emerald" ? "bg-emerald-500" : "bg-blue-500"}`}></div>
           </div>
         </div>
       </div>
@@ -413,7 +413,7 @@ function RenderUI({ item }: { item: any }) {
   
   if (type === 'wallet') {
     return (
-      <div className="w-full h-full relative overflow-hidden bg-[#0a192f] pt-8 p-4 flex flex-col">
+      <div className={`w-full h-full relative overflow-hidden pt-8 p-4 flex flex-col ${ui.theme === "dark" ? "bg-[#111111]" : "bg-[#0a192f]"}`}>
         <div className="flex justify-between items-center mb-4 relative z-10">
           <div className="flex items-center gap-2">
             <div>
@@ -422,7 +422,7 @@ function RenderUI({ item }: { item: any }) {
             </div>
           </div>
         </div>
-        <div className="relative z-10 w-full bg-gradient-to-r from-blue-600 to-blue-800 rounded-xl p-3 shadow-lg mb-3 border border-blue-500/30">
+        <div className={`relative z-10 w-full rounded-xl p-3 shadow-lg mb-3 border ${ui.theme === "dark" ? "bg-gradient-to-r from-purple-600 to-indigo-800 border-purple-500/30" : "bg-gradient-to-r from-blue-600 to-blue-800 border-blue-500/30"}`}>
           <span className="text-white/80 text-[9px] font-bold block mb-0.5">יתרה זמינה</span>
           <div className="text-white text-2xl font-light tracking-wide mb-3">{ui.balance}</div>
           <div className="flex gap-2">
@@ -430,7 +430,7 @@ function RenderUI({ item }: { item: any }) {
             <button className="flex-1 bg-white/20 text-white text-[8px] font-bold py-1.5 rounded">{ui.btn2}</button>
           </div>
         </div>
-        <div className="relative z-10 flex-1 bg-[#112240] rounded-xl p-3 border border-white/5">
+        <div className={`relative z-10 flex-1 rounded-xl p-3 border border-white/5 ${ui.theme === "dark" ? "bg-[#1e1e1e]" : "bg-[#112240]"}`}>
           <span className="text-white text-[9px] font-bold block mb-2">פעולות אחרונות</span>
           <div className="space-y-2">
             <div className="flex justify-between items-center">
