@@ -39,8 +39,8 @@ export default function Features() {
                   {feature.icon}
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
-              <p className="text-gray-400 text-sm leading-relaxed">{feature.desc}</p>
+              <h3 className="text-xl font-bold text-white mb-3 font-sans">{feature.title}</h3>
+              <p className="text-gray-400 text-sm leading-relaxed font-sans">{feature.desc}</p>
             </motion.div>
           ))}
         </div>

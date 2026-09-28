@@ -15,20 +15,20 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <span className="inline-block py-1 px-3 rounded-full bg-gray-800/50 border border-gray-700 text-gray-300 text-sm font-medium mb-6">
-            סוכנות בוטיק דיגיטלית
+            סוכנות בוטיק לדיגיטל
           </span>
-          <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight leading-tight mb-8">
+          <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight leading-tight mb-8 font-sans">
             יוצרים נוכחות דיגיטלית<br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-l from-gray-300 to-gray-500">שבלתי אפשרי להתעלם ממנה.</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-l from-gray-300 to-gray-500">שמותירה חותם.</span>
           </h1>
-          <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-400 font-light">
-            עיצוב, פיתוח וחדשנות למותגים שרוצים להוביל את השוק. אנחנו הופכים רעיונות מורכבים לחוויות משתמש פשוטות, יפהפיות וממירות.
+          <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-400 font-light font-sans">
+            עיצוב, פיתוח וקידום אתרים ברמה הגבוהה ביותר. אנחנו הופכים מותגים לחוויות דיגיטליות מתקדמות, ממירות ומרשימות.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4 items-center">
-            <a href="#portfolio" className="px-8 py-4 border border-transparent rounded-full shadow-sm text-base font-medium text-premium-900 bg-white hover:bg-gray-100 transition-colors w-full sm:w-auto">
-              צפו בעבודות שלנו
+            <a href="#portfolio" className="px-8 py-4 border border-transparent rounded-full shadow-sm text-base font-medium text-premium-900 bg-white hover:bg-gray-100 transition-colors w-full sm:w-auto font-sans">
+              צפה בעבודות שלנו
             </a>
-            <a href="#contact" className="px-8 py-4 border border-gray-600 rounded-full shadow-sm text-base font-medium text-white hover:bg-gray-800 hover:border-gray-500 transition-colors w-full sm:w-auto">
+            <a href="#contact" className="px-8 py-4 border border-gray-600 rounded-full shadow-sm text-base font-medium text-white hover:bg-gray-800 hover:border-gray-500 transition-colors w-full sm:w-auto font-sans">
               צור קשר
             </a>
           </div>

@@ -93,19 +93,19 @@ export default function Portfolio() {
                 </button>
                 
                 <span className="text-premium-gold text-xs font-bold tracking-widest uppercase mb-3 block">{modalData.subCategory}</span>
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">{modalData.title}</h2>
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 font-sans">{modalData.title}</h2>
                 
                 {projectData[modalData.category as keyof typeof projectData] && (
                   <div className="space-y-8">
                     <div>
-                      <h4 className="text-white text-lg font-bold mb-3 flex items-center gap-2">
+                      <h4 className="text-white text-lg font-bold mb-3 flex items-center gap-2 font-sans">
                         <div className="w-2 h-2 rounded-full bg-red-500 shadow-[0_0_10px_rgba(239,68,68,0.5)]"></div> האתגר
                       </h4>
                       <p className="text-gray-400 text-sm leading-relaxed">{projectData[modalData.category as keyof typeof projectData].challenge}</p>
                     </div>
                     
                     <div>
-                      <h4 className="text-white text-lg font-bold mb-3 flex items-center gap-2">
+                      <h4 className="text-white text-lg font-bold mb-3 flex items-center gap-2 font-sans">
                         <div className="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_10px_rgba(34,197,94,0.5)]"></div> הפתרון
                       </h4>
                       <p className="text-gray-400 text-sm leading-relaxed">{projectData[modalData.category as keyof typeof projectData].solution}</p>
