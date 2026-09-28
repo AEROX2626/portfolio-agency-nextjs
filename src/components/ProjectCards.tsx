@@ -126,7 +126,7 @@ const projects = [
   {
     id: 19, category: 'corporate', domain: 'skyline-arch.com', subCategory: 'תדמית ו-B2B / אדריכלות', title: 'Skyline Architecture',
     desc: 'אתר רשמי למשרד אדריכלות מוביל, עם פורטפוליו תמונות מסך מלא וחווית גלילה כובשת המציגה פרויקטים מורכבים.',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80',
     type: 'minimal_hero',
     ui: { logo: 'SKYLINE.', subtitle: 'עיצוב אורבני עכשווי', headline: 'מגדירים מחדש<br/>את קו הרקיע.' }
   },
