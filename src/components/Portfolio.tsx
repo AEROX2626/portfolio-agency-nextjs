@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
 import ProjectCards from './ProjectCards';
-import { projectData } from '@/data/projects';
+import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
+import { projectData } from '../data/projects';
 
 export default function Portfolio() {
   const [filter, setFilter] = useState('all');
@@ -18,125 +18,140 @@ export default function Portfolio() {
   ];
 
   return (
-    <>
-      <section id="portfolio" className="py-24 bg-premium-800/30 border-y border-gray-800/50">
-        <div className="max-w-[90rem] mx-auto px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">עבודות נבחרות</h2>
-              <p className="text-gray-400 max-w-xl text-lg">הצצה לפרויקטים האחרונים שלנו. כל אתר נבנה בקפידה, עם חשיבה על חווית משתמש, עיצוב עוצר נשימה והמרות גבוהות.</p>
-            </motion.div>
-            
-            {/* Filters */}
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="mt-8 md:mt-0 flex flex-wrap gap-2"
-            >
-              {filters.map(f => (
-                <button 
-                  key={f.id}
-                  onClick={() => setFilter(f.id)}
-                  className={`px-5 py-2 rounded-full border text-sm font-medium transition-colors ${
-                    filter === f.id 
-                      ? 'bg-white text-premium-900 border-white' 
-                      : 'border-gray-700 text-gray-400 hover:border-gray-500 hover:text-white'
-                  }`}
-                >
-                  {f.label}
-                </button>
-              ))}
-            </motion.div>
-          </div>
+    <section id="portfolio" className="py-32 bg-black min-h-screen relative z-10">
+      <div className="max-w-[90rem] mx-auto px-6 lg:px-8">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <span className="inline-block py-1 px-3 rounded-full bg-premium-gold/10 border border-premium-gold/20 text-premium-gold text-sm font-bold tracking-widest mb-6 font-sans">
+            התיק עבודות שלנו
+          </span>
+          <h2 className="text-5xl md:text-7xl font-black text-white mb-6 font-sans tracking-tight">פרויקטים נבחרים</h2>
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto font-medium font-sans">
+            הצצה לחלק מהפרויקטים שהובלנו לאחרונה. מסטארט-אפים בצמיחה ועד למותגי ריטייל מובילים.
+          </p>
+        </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <ProjectCards onOpenModal={setModalData} filter={filter} />
-          </div>
+        {/* Filters */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2 }}
+          className="flex flex-wrap justify-center gap-3 mb-16"
+        >
+          {filters.map(f => (
+            <button 
+              key={f.id}
+              onClick={() => setFilter(f.id)}
+              className={`px-6 py-2.5 rounded-full text-sm font-bold transition-all font-sans \${
+                filter === f.id 
+                ? 'bg-white text-black shadow-[0_0_20px_rgba(255,255,255,0.3)] scale-105' 
+                : 'bg-white/5 text-gray-400 hover:bg-white/10 hover:text-white border border-white/5'
+              }`}
+            >
+              {f.label}
+            </button>
+          ))}
+        </motion.div>
+
+        {/* Portfolio Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <ProjectCards onOpenModal={setModalData} filter={filter} />
         </div>
-      </section>
+      </div>
 
       {/* Case Study Modal */}
       <AnimatePresence>
         {modalData && (
-          <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-6" dir="rtl">
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-6 bg-black/80 backdrop-blur-md" 
+            dir="rtl"
+          >
             <motion.div 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setModalData(null)}
-              className="absolute inset-0 bg-black/80 backdrop-blur-md"
-            ></motion.div>
-            
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
-              className="relative w-full max-w-5xl max-h-[90vh] bg-premium-900 border border-gray-700 rounded-2xl md:rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row z-10"
+              initial={{ scale: 0.95, opacity: 0, y: 20 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.95, opacity: 0, y: 20 }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              className="bg-[#111] rounded-3xl w-full max-w-5xl max-h-[90vh] overflow-y-auto shadow-2xl border border-white/10 flex flex-col md:flex-row relative"
             >
-              {/* Image Side */}
-              <div className="w-full md:w-5/12 h-48 md:h-auto bg-black relative flex-shrink-0 border-b md:border-b-0 md:border-l border-gray-800">
-                <img src={modalData.imgSrc} className="w-full h-full object-cover opacity-80" alt="Project Mockup" />
-                <div className="absolute inset-0 bg-gradient-to-t from-premium-900 md:bg-gradient-to-r md:from-premium-900 via-transparent to-transparent"></div>
+              <button 
+                onClick={() => setModalData(null)}
+                className="absolute top-4 left-4 md:top-6 md:left-6 z-50 p-2.5 bg-black/50 hover:bg-black text-white rounded-full transition-colors backdrop-blur-md border border-white/10"
+              >
+                <X className="w-5 h-5" />
+              </button>
+
+              {/* Modal Image/Visual Side */}
+              <div className="w-full md:w-1/2 h-64 md:h-auto relative bg-gray-900 overflow-hidden">
+                {modalData.imgSrc ? (
+                  <img src={modalData.imgSrc} alt={modalData.title} className="absolute inset-0 w-full h-full object-cover" />
+                ) : (
+                  <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-gray-900 to-black">
+                    <span className="text-gray-700 text-6xl font-black opacity-30 font-sans">UI</span>
+                  </div>
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div className="absolute bottom-6 right-6 left-6">
+                  <span className="text-premium-gold text-xs font-bold tracking-widest uppercase mb-2 block font-sans">{modalData.subCategory}</span>
+                  <h3 className="text-3xl md:text-4xl font-black text-white font-sans">{modalData.title}</h3>
+                </div>
               </div>
-              
-              {/* Text Content Side */}
-              <div className="w-full md:w-7/12 h-full overflow-y-auto p-8 md:p-12 scroll-smooth">
-                <button onClick={() => setModalData(null)} className="absolute top-4 md:top-6 left-4 md:left-6 w-10 h-10 bg-gray-800/80 hover:bg-white hover:text-black rounded-full flex items-center justify-center text-gray-300 transition-colors z-10 border border-gray-700 hover:border-white">
-                  <X className="w-5 h-5" />
-                </button>
-                
-                <span className="text-premium-gold text-xs font-bold tracking-widest uppercase mb-3 block">{modalData.subCategory}</span>
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 font-sans">{modalData.title}</h2>
-                
-                {projectData[modalData.category as keyof typeof projectData] && (
-                  <div className="space-y-8">
-                    <div>
-                      <h4 className="text-white text-lg font-bold mb-3 flex items-center gap-2 font-sans">
-                        <div className="w-2 h-2 rounded-full bg-red-500 shadow-[0_0_10px_rgba(239,68,68,0.5)]"></div> האתגר
+
+              {/* Modal Content Side */}
+              <div className="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                {projectData[modalData.category as keyof typeof projectData] ? (
+                  <>
+                    <div className="mb-10">
+                      <h4 className="text-xl font-black text-white mb-4 flex items-center gap-3 font-sans">
+                        <span className="w-8 h-[2px] bg-premium-gold"></span> האתגר
                       </h4>
-                      <p className="text-gray-400 text-sm leading-relaxed">{projectData[modalData.category as keyof typeof projectData].challenge}</p>
+                      <p className="text-gray-400 leading-relaxed font-sans font-medium text-lg">
+                        {projectData[modalData.category as keyof typeof projectData].challenge}
+                      </p>
                     </div>
                     
-                    <div>
-                      <h4 className="text-white text-lg font-bold mb-3 flex items-center gap-2 font-sans">
-                        <div className="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_10px_rgba(34,197,94,0.5)]"></div> הפתרון
+                    <div className="mb-10">
+                      <h4 className="text-xl font-black text-white mb-4 flex items-center gap-3 font-sans">
+                        <span className="w-8 h-[2px] bg-white"></span> הפתרון
                       </h4>
-                      <p className="text-gray-400 text-sm leading-relaxed">{projectData[modalData.category as keyof typeof projectData].solution}</p>
-                    </div>
-                    
-                    <div className="grid grid-cols-2 gap-4 pt-4 border-t border-gray-800">
-                      <div className="bg-gray-800/30 p-4 rounded-xl border border-gray-700/50 flex flex-col justify-center items-start">
-                        <span className="block text-gray-500 text-xs mb-1 uppercase tracking-wider font-medium">{projectData[modalData.category as keyof typeof projectData].stat1Label}</span>
-                        <span className="text-white text-3xl font-light">{projectData[modalData.category as keyof typeof projectData].stat1}</span>
-                      </div>
-                      <div className="bg-gray-800/30 p-4 rounded-xl border border-gray-700/50 flex flex-col justify-center items-start">
-                        <span className="block text-gray-500 text-xs mb-1 uppercase tracking-wider font-medium">זמן טעינה</span>
-                        <span className="text-white text-3xl font-light">{projectData[modalData.category as keyof typeof projectData].stat2}</span>
-                      </div>
+                      <p className="text-gray-400 leading-relaxed font-sans font-medium text-lg">
+                        {projectData[modalData.category as keyof typeof projectData].solution}
+                      </p>
                     </div>
 
-                    <div className="pt-4">
-                      <h4 className="text-white text-sm font-bold mb-4 uppercase tracking-widest text-gray-500">טכנולוגיות בהן השתמשנו</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {projectData[modalData.category as keyof typeof projectData].tech.map(t => (
-                          <span key={t} className="px-4 py-1.5 bg-gray-800 text-gray-300 text-[11px] font-bold tracking-widest rounded-full border border-gray-700">{t}</span>
-                        ))}
+                    <div className="grid grid-cols-2 gap-6 pt-8 border-t border-white/10">
+                      <div>
+                        <span className="block text-gray-500 text-xs font-bold uppercase tracking-widest mb-2 font-sans">
+                          {projectData[modalData.category as keyof typeof projectData].stat1Label}
+                        </span>
+                        <span className="block text-3xl font-black text-white font-sans">
+                          {projectData[modalData.category as keyof typeof projectData].stat1}
+                        </span>
+                      </div>
+                      <div>
+                        <span className="block text-gray-500 text-xs font-bold uppercase tracking-widest mb-2 font-sans">מהירות טעינה</span>
+                        <span className="block text-3xl font-black text-white font-sans">
+                          {projectData[modalData.category as keyof typeof projectData].stat2}
+                        </span>
                       </div>
                     </div>
-                  </div>
+                  </>
+                ) : (
+                  <p className="text-gray-400 font-sans">טוען נתונים...</p>
                 )}
               </div>
             </motion.div>
-          </div>
+          </motion.div>
         )}
       </AnimatePresence>
-    </>
+    </section>
   );
 }
