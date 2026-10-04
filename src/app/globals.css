@@ -31,6 +31,11 @@
   }
 }
 
+html { 
+  scroll-behavior: smooth; 
+  scroll-padding-top: 120px; 
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -45,4 +50,3 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #404040; 
 }
-\n\nhtml { scroll-behavior: smooth; scroll-padding-top: 120px; overflow-x: hidden; }\nbody { overflow-x: hidden; }

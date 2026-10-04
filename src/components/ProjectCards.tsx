@@ -562,7 +562,7 @@ export default function ProjectCards({ onOpenModal, filter }: { onOpenModal: (ca
             <h3 className="text-3xl font-black text-white mb-4 font-sans leading-tight">{item.title}</h3>
             <p className="text-gray-300 text-sm leading-relaxed mb-8 font-sans font-medium max-w-sm">{item.desc}</p>
             <span className="inline-flex items-center gap-2 text-black bg-white px-6 py-3 rounded-full text-sm font-black transition-transform hover:scale-105 active:scale-95 shadow-xl font-sans">
-              צפה במקרה הבוחן
+              צפה בפרויקט
             </span>
           </div>
         </div>
