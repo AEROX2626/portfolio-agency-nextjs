@@ -1,0 +1,7 @@
+const fs = require('fs');
+let c = fs.readFileSync('src/components/Contact.tsx', 'utf-8');
+c = c.replace(
+  '<a href="mailto:contact@agency.com" className="group relative px-10 py-5 bg-white text-black font-black text-lg rounded-full overflow-hidden shadow-xl font-sans hover:scale-105 active:scale-95 transition-all">\n              <span className="relative z-10">שלחו לנו הודעה</span>\n              <div className="absolute inset-0 bg-gradient-to-r from-gray-200 to-white opacity-0 group-hover:opacity-100 transition-opacity"></div>\n            </a>',
+  '<a href="mailto:contact@agency.com" className="group relative px-10 py-5 bg-white text-black font-black text-lg rounded-full overflow-hidden shadow-xl font-sans hover:scale-105 active:scale-95 transition-all">\n              <span className="relative z-10">מייל</span>\n              <div className="absolute inset-0 bg-gradient-to-r from-gray-200 to-white opacity-0 group-hover:opacity-100 transition-opacity"></div>\n            </a>\n            <a href="https://wa.me/972503938114" target="_blank" rel="noopener noreferrer" className="group relative px-10 py-5 bg-[#25D366] text-white font-black text-lg rounded-full overflow-hidden shadow-xl font-sans hover:scale-105 active:scale-95 transition-all">\n              <span className="relative z-10">וואטסאפ</span>\n              <div className="absolute inset-0 bg-gradient-to-r from-[#128C7E] to-[#25D366] opacity-0 group-hover:opacity-100 transition-opacity"></div>\n            </a>'
+);
+fs.writeFileSync('src/components/Contact.tsx', c);

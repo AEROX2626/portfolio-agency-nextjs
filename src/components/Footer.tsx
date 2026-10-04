@@ -28,9 +28,9 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-bold mb-4 font-sans">יצירת קשר</h4>
             <ul className="space-y-2 text-sm text-gray-500 font-sans">
-              <li>תל אביב, ישראל</li>
-              <li>contact@digital-agency.co.il</li>
-              <li>03-123-4567</li>
+                            <li>contact@digital-agency.co.il</li>
+              <li>050-393-8114</li>
+              <li><a href="https://wa.me/972503938114" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition-colors text-green-500 font-bold block mt-2">וואטסאפ</a></li>
             </ul>
           </div>
         </div>
